@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block body %}
+  <div class="row body">
+    <form method="POST" enctype="multipart/form-data">
+      {% csrf_token %}
+      <ul>
+          <p class="left">
+            Are you want to Delete this Movie<b>?</b>
+          </p>
+        <ul>
+          <input class="btn btn-warning" type="submit" value="Submit" />
+          <small>or press <strong>enter</strong></small>
+        </ul>
+      </ul>
+    </form>
+  </div>
+</div>
+
+{% endblock %}

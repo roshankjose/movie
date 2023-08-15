@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block body %}
+
+
+<div class="card" style="width: 60%;" xmlns="http://www.w3.org/1999/html">
+  <img class="card-img-top" src="{{movie.img.url}}" alt="Card image cap">
+  <div class="card-body">
+      <h5 class="card-title">{{movie.name}}</h5>{{movie.year}}
+    <p class="card-text">{{movie.desc}}</p>
+    <div class="container">
+  <div class="row">
+    <div class="col">
+     <a href="{% url 'movieapp:update' movie.id %}" class="btn btn-outline-warning btn-lg btn-block">Update</a>
+    </div>
+    <div class="col">
+      <a href="{% url 'movieapp:delete' movie.id %}" class="btn btn-outline-danger btn-lg btn-block">Delete</a>
+    </div>
+  </div>
+  </div>
+</div>
+</div>
+
+{% endblock %}
